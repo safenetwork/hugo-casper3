@@ -24,7 +24,7 @@
                 </header>
     
                 <section class="post-card-excerpt">
-                    <p>{{ .context.Summary }}</p>
+                    <p>{{ .context.Param "description" }}</p>
                 </section>
     
             </a>
@@ -32,8 +32,7 @@
             <footer class="post-card-meta">
                     <ul class="author-list">
                         <li class="author-list-item">
-                            <div class="author-name-tooltip">{{ .context.Param "author" }}</div>
-                            <a href="https://test.com" class="static-avatar author-profile-image">{{- partial "icons/avatar.html" -}}</a>
+                            <a href="https://safenetforum.org/u/{{ .context.Param "username" }}" class="static-avatar author-profile-image">{{- partial "icons/avatar.html" -}}</a>
                         </li>
                     </ul>
                     <div class="post-card-byline-content">
